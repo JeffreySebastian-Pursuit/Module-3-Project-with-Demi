@@ -1,3 +1,21 @@
-h1{
+body{
     color: white;
+}
+
+.AboutUs{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 100px 100px;
+
+}
+
+section img {
+    height: 250px;
+}
+
+.aboutContainer{
+    text-align: center;
 }
