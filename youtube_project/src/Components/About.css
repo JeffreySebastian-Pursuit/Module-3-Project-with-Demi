@@ -1,21 +1,35 @@
-body{
-    color: white;
+body {
+  color: white;
 }
 
-.AboutUs{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    align-items: center;
-    flex-wrap:wrap;
-    margin: 100px 100px;
+.aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
+.aboutDemi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 50px;
+}
+.aboutJeffrey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 50px;
+  
 }
 
 section img {
-    height: 250px;
+  height: 250px;
+  width: 250px;
+
 }
 
-.aboutContainer{
-    text-align: center;
+ section .aboutContainer {
+  text-align: left;
+  margin: 20px;
+  text-indent: 50px;
 }
