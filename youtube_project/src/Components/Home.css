@@ -5,3 +5,7 @@ h2{
 body{
     color: white
 }
+
+#videos-container ul {
+    list-style-type: none;
+}
