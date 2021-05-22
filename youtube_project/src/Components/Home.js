@@ -11,12 +11,12 @@ const Home = () => {
   const fetchVideos = async () => {
     try {
       const res = await axios.get(
-        `https://youtube.googleapis.com/youtube/v3/search?q=${input}&key=${process.env.REACT_APP_YOUTUBE_APIKEY}`
+        `https://youtube.googleapis.com/youtube/v3/search?q=${input}&part=snippet&key=${process.env.REACT_APP_YOUTUBE_APIKEY}`
       );
       // console.log(res.data.items[0].id.videoId);
       setVideos(res.data.items);
       debugger
-      console.log(res.data.items)
+      console.log("THIS IS THE DATA", res.data.items)
     } catch (error) {
       console.log(error);
       setVideos([]);
@@ -71,12 +71,15 @@ const Home = () => {
             {videos.map((item) => {
               const videoSrc = `https://www.youtube.com/embed/${item.id.videoId}`;
               return (
+                <li>
                 <iframe
                   src={videoSrc}
                   allowFullScreen
                   title="Video player"
                   key={item.id.videoId}
                 />
+                <title>{item.snippet.title}</title>
+                </li>
               );
               // <li key={item.id.videoId}>{item.id.videoId}</li>
             })}
