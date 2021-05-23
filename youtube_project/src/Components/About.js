@@ -28,6 +28,12 @@ class About extends React.Component {
               facing End User Support role and have been for about a year and a
               half.
             </p>
+            <a href="https://github.com/WoahDemi">
+              <img
+                src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
+                alt="github icon" className="githubIcon"
+              />
+            </a>
           </section>
 
           <section className="aboutJeffrey">
@@ -37,7 +43,7 @@ class About extends React.Component {
             ></img>
             <h1>About Jeffrey</h1>
             <p className="aboutContainer">
-              I am a Full Stuck Developer at Pursuit, fascinated by creating an
+              I am a Full Stack Developer at Pursuit, fascinated by creating an
               application that would benefit other people in different
               countries. Back home in the Philippines, people are struggling
               with pursuing their education due to a lack of resources.
@@ -49,7 +55,7 @@ class About extends React.Component {
               fellowship with a 9% acceptance rate.
             </p>
             <p className="aboutContainer">
-              Apart from my career as a Full Stuck Developer, I am an
+              Apart from my career as a Full Stack Developer, I am an
               experienced financial operation and quality assurance professional
               with a demonstrated history of working in hospitality. Along with
               my expertise, I consider myself to be an innovative, tenacious,
@@ -59,11 +65,17 @@ class About extends React.Component {
               empower other people by giving them the right resources through
               technology.
             </p>
+          <a href="https://github.com/JeffreySebastian-Pursuit">
+            <img
+              src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
+              alt="github icon" className="githubIcon"
+            />
+          </a>
           </section>
         </div>
-
         <section>
           <h2>About The Project</h2>
+          <p>Still working on it....</p>
         </section>
       </div>
     );

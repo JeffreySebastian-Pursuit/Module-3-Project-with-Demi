@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 require("dotenv").config();
 // import Video from './Video'
 
@@ -24,9 +25,6 @@ const Home = () => {
       setVideos([]);
     }
   };
-  // useEffect(() => {
-  //   fetchVideos();
-  // }, []);
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -81,24 +79,25 @@ const Home = () => {
               // const videoSrc = `https://www.youtube.com/embed/${item.id.videoId}`;
               // debugger
               return (
-                <li onClick={showVideo}>
-                  <a href="./Video">
+                <li onClick={showVideo}  key={item.id.videoId}>
+
+
+                  <Link to={`/videos/${item.id.videoId}`}>
                     <img
                       src={item.snippet.thumbnails.default.url}
                       // allowFullScreen
                       title={item.id.videoId}
-                      key={item.id.videoId}
                       alt={item.snippet.title}
                     />
-                  </a>
                   <p>{item.snippet.title}</p>
+                  </Link>
                 </li>
               );
               // <li key={item.id.videoId}>{item.id.videoId}</li>
             })}
           </ul>
         </section>
-      ) : null}
+      ) :<h2>No Videos</h2>}
       {/* <Video showVideo={showVideo} /> */}
     </div>
   );
