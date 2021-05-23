@@ -74,7 +74,7 @@ class About extends React.Component {
           </section>
         </div>
         <section>
-          <h2>About The Project</h2>
+          <h2>Project Description</h2>
           <p>Still working on it....</p>
         </section>
       </div>

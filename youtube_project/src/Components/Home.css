@@ -2,8 +2,15 @@ h2{
     color: white
 }
 
-body{
-    color: white
+body a{
+    color: white;
+    text-decoration: none;
+}
+
+body a:hover{
+  font-weight: bold;
+  color: red;
+    
 }
 
 #videos-container ul {

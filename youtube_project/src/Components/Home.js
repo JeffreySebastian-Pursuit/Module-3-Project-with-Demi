@@ -37,27 +37,10 @@ const Home = () => {
     setInput("");
   };
 
-  // searchByKeyword = () =>{
-  //   const results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
-
-  //   for(let i in results.items) {
-  //     let item = results.items[i];
-  //     Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-  //   }
-  // }
-
-  // let search;
-  // if(hasSearched){
-  //   if(videos?.title){
-  //     search = {
-
-  //     }
-  //   }
-  // }
   const showVideo = (e) => {
     setClickVideo(e.target.title);
     console.log(e.target.title);
-    debugger;
+    // debugger;
   };
   return (
     <div>
@@ -75,29 +58,24 @@ const Home = () => {
         <section id="videos-container">
           <ul>
             {videos.map((item) => {
-              // <Video item={item}/>
-              // const videoSrc = `https://www.youtube.com/embed/${item.id.videoId}`;
-              // debugger
               return (
-                <li onClick={showVideo}  key={item.id.videoId}>
-
-
+                <li onClick={showVideo} key={item.id.videoId}>
                   <Link to={`/videos/${item.id.videoId}`}>
                     <img
                       src={item.snippet.thumbnails.default.url}
-                      // allowFullScreen
                       title={item.id.videoId}
                       alt={item.snippet.title}
                     />
-                  <p>{item.snippet.title}</p>
+                    <p id="videoTitle">{item.snippet.title}</p>
                   </Link>
                 </li>
               );
-              // <li key={item.id.videoId}>{item.id.videoId}</li>
             })}
           </ul>
         </section>
-      ) :<h2>No Videos</h2>}
+      ) : (
+        <h2>No Videos</h2>
+      )}
       {/* <Video showVideo={showVideo} /> */}
     </div>
   );
