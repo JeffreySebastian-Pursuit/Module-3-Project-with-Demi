@@ -67,7 +67,7 @@ const Home = () => {
           </ul>
         </section>
       ) : (
-       <h2>No Videos</h2>
+        <h2>No Videos</h2>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './CommentForm.css'
+import "./CommentForm.css";
 
 let uuid = 1;
 const CommentForm = () => {
@@ -58,7 +58,7 @@ const CommentForm = () => {
         />
         <input type="submit" />
       </form>
-      <ul className='commentForm'>
+      <ul className="commentForm">
         {lists.map((list) => {
           return <li key={list.id}>{list.type}</li>;
         })}
