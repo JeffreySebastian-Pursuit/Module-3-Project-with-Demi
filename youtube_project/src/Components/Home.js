@@ -60,7 +60,7 @@ const Home = () => {
             {videos.map((item) => {
               return (
                 <li onClick={showVideo} key={item.id.videoId}>
-                  <Link to={`/videos/${item.id.videoId}`}>
+                  <Link to={`/videos/${item.id.videoId}`} className="video">
                     <img
                       src={item.snippet.thumbnails.default.url}
                       title={item.id.videoId}

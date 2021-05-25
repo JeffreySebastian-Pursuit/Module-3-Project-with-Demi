@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './CommentForm.css'
 
 let uuid = 1;
 const CommentForm = () => {
@@ -23,8 +24,8 @@ const CommentForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.localStorage.setItem("name", input, e.target.value);
-    window.localStorage.setItem("comment", inputComment, e.target.value);
+    // window.localStorage.getItem("name", input, e.target.value);
+    // window.localStorage.setItem("comment", inputComment, e.target.value);
     const newList = { id: uuid++, type: input };
     const newComment = { id: uuid++, type: inputComment };
     addName(newList);
@@ -57,7 +58,7 @@ const CommentForm = () => {
         />
         <input type="submit" />
       </form>
-      <ul>
+      <ul className='commentForm'>
         {lists.map((list) => {
           return <li key={list.id}>{list.type}</li>;
         })}

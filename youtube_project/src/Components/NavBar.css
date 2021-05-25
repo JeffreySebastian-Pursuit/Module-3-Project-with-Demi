@@ -2,7 +2,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: red;
+    background-color: rgb(31, 27, 27);
     font-weight: bold;
     font-size: 30px;
     height: 50px;
@@ -10,4 +10,8 @@ nav{
 nav a {
     text-decoration: none;
     color: white;
+}
+
+nav a:hover{
+color: red;
 }

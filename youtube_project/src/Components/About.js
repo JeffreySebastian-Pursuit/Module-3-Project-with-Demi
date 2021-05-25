@@ -31,7 +31,8 @@ class About extends React.Component {
             <a href="https://github.com/WoahDemi">
               <img
                 src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
-                alt="github icon" className="githubIcon"
+                alt="github icon"
+                className="githubIcon"
               />
             </a>
           </section>
@@ -65,17 +66,25 @@ class About extends React.Component {
               empower other people by giving them the right resources through
               technology.
             </p>
-          <a href="https://github.com/JeffreySebastian-Pursuit">
-            <img
-              src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
-              alt="github icon" className="githubIcon"
-            />
-          </a>
+            <a href="https://github.com/JeffreySebastian-Pursuit">
+              <img
+                src="https://camo.githubusercontent.com/b079fe922f00c4b86f1b724fbc2e8141c468794ce8adbc9b7456e5e1ad09c622/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f7376672f6769746875622e737667"
+                alt="github icon"
+                className="githubIcon"
+              />
+            </a>
           </section>
         </div>
         <section>
-          <h2>Project Description</h2>
-          <p>Still working on it....</p>
+          <h2 id="projectTitle">Project Description</h2>
+          <p className='aboutProject'>
+            This Project lets you search for YouTube videos using the YouTube
+            API, then choose a video from a list to watch. In this project we
+            use Trello Board to track the ToDo lists for this website like
+            functionality, styling, and etch. Furthermore, while we were working
+            on this project we encountered several roadblocks. For example, we
+            learned that some API's like Youtube have limited fetch quotas of 10,000 units.
+          </p>
         </section>
       </div>
     );

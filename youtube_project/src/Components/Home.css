@@ -1,18 +1,43 @@
+
 h2{
     color: white
 }
+
 
 body a{
     color: white;
     text-decoration: none;
 }
 
-body a:hover{
+body .video:hover{
   font-weight: bold;
-  color: red;
+  color: rgb(15, 10, 10);
     
 }
 
 #videos-container ul {
     list-style-type: none;
 }
+
+.video{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    
+}
+.video p{
+    font-size: 20px;
+}
+
+/* #videos-container ul li{
+    justify-content: space-around;
+    align-items: center;
+
+}
+#videos-container ul li #videoTitle{
+    text-align: right;
+    align-items: center;
+} */
