@@ -42,6 +42,47 @@ section .aboutProject {
   margin: 20px 100px 40px 100px;
   text-indent: 50px;
 }
-section #projectTitle{
-    margin-top: -30px;
+section #projectTitle {
+  margin-top: -30px;
+  border-top: solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .aboutDemi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: -60px;
+    font-size: 12px;
+    border-right: solid black;
+  }
+  .aboutJeffrey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 150px;
+    font-size: 12px;
+  }
+
+  section img {
+    height: 100px;
+    width: 100px;
+  }
+
+  section .aboutProject {
+    text-align: left;
+    text-indent: 50px;
+    margin: 20px 20px;
+    
+    font-size: 12px;
+  }
+  section #projectTitle {
+    margin-top: -45px;
+  }
 }
