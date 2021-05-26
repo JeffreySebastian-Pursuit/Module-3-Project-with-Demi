@@ -8,7 +8,6 @@ const Video = (props) => {
 
   const goBack = () => {
     history.goBack();
-    
   };
   const videoSrc = `https://www.youtube.com/embed/${id}`;
   return (

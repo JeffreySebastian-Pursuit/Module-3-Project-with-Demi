@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -10,10 +10,11 @@ const Home = () => {
   const [hasSearched, setHasSearched] = useState(false);
   const [clickVideo, setClickVideo] = useState("");
 
-  const fetchVideos = async () => {
+  const fetchVideos = async (prevSearch) => {
     try {
+      const newInput = input || prevSearch;
       const res = await axios.get(
-        `https://youtube.googleapis.com/youtube/v3/search?q=${input}&part=snippet&key=${process.env.REACT_APP_YOUTUBE_APIKEY}`
+        `https://youtube.googleapis.com/youtube/v3/search?q=${newInput}&part=snippet&key=${process.env.REACT_APP_YOUTUBE_APIKEY}`
       );
       setVideos(res.data.items);
     } catch (error) {
@@ -25,10 +26,18 @@ const Home = () => {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+  useEffect(() => {
+    if (localStorage.getItem("input")) {
+      fetchVideos(localStorage.getItem("input"));
+      setHasSearched(true);
+    }
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     setHasSearched(true);
     fetchVideos();
+    localStorage.setItem("input", input);
+
     setInput("");
   };
 

@@ -24,8 +24,6 @@ const CommentForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // window.localStorage.getItem("name", input, e.target.value);
-    // window.localStorage.setItem("comment", inputComment, e.target.value);
     const newList = { id: uuid++, type: input };
     const newComment = { id: uuid++, type: inputComment };
     addName(newList);
